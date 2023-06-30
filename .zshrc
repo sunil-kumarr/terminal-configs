@@ -146,7 +146,9 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv)
 export ANDROID_HOME=/Users/$USER/Library/Android/sdk
 export PATH=/Users/$USER/flutter/bin:$PATH
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-export PATH
+
+# To add custom aliases
+[[ -f ~/.zsh_aliases ]] && . ~/.zsh_aliases
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -158,3 +160,11 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
 # Add Visual Studio Code (code)
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/opt/homebrew/opt/postgresql@13/bin:/Users/darknight/flutter/bin:/opt/homebrew/opt/postgresql@13/bin:/Users/darknight/.nvm/versions/node/v15.14.0/bin:/Users/darknight/flutter/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/darknight/Library/Android/sdk/tools:/Users/darknight/Library/Android/sdk/platform-tools:/Users/darknight/Library/Android/sdk/tools:/Users/darknight/Library/Android/sdk/platform-tools"
+export PATH="/opt/homebrew/opt/elasticsearch@6/bin:$PATH"
+export PATH="/opt/homebrew/opt/elasticsearch@6/bin:$PATH"
+source <(kubectl completion zsh)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+source "$HOME/.cargo/env"
